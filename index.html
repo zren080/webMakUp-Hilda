@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Vilda Makeup</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+<main class="auth-shell">
+  <section class="auth-brand"><div class="brand-icon">💄</div><p class="eyebrow">BEAUTY • CARE • CONFIDENCE</p><h1>Vilda <span>Makeup</span></h1><p>Temukan produk kecantikan favoritmu dan belanja dengan nyaman.</p><div class="brand-points"><span>✦ Produk pilihan</span><span>✦ Voucher & diskon</span><span>✦ Belanja praktis</span></div></section>
+  <section class="auth-card">
+    <div class="auth-tabs"><button id="loginTab" class="tab active" type="button" onclick="showForm('login')">Masuk</button><button id="registerTab" class="tab" type="button" onclick="showForm('register')">Buat Akun</button></div>
+    <form id="loginForm">
+      <h2>Selamat datang! 👋</h2><p class="muted">Masuk untuk melanjutkan ke halaman belanja.</p>
+      <label for="loginUsername">Username</label><input id="loginUsername" autocomplete="username" required placeholder="Masukkan username">
+      <label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Masukkan password">
+      <p id="loginError" class="message" role="status"></p><button class="submit-btn" type="submit">Masuk ke Toko →</button>
+      <div class="demo-box"><b>Akun admin demo</b><br>Username: <code>admin</code><br>Password: <code>VildaAdmin123!</code></div>
+    </form>
+    <form id="registerForm" hidden>
+      <h2>Buat akun pembeli</h2><p class="muted">Daftar akun demo untuk melanjutkan belanja.</p>
+      <label for="registerName">Nama</label><input id="registerName" required maxlength="60" placeholder="Nama kamu">
+      <label for="registerUsername">Username</label><input id="registerUsername" required minlength="3" maxlength="24" autocomplete="username" placeholder="Minimal 3 karakter">
+      <label for="registerPassword">Password</label><input id="registerPassword" type="password" required minlength="6" autocomplete="new-password" placeholder="Minimal 6 karakter">
+      <p id="registerError" class="message" role="status"></p><button class="submit-btn" type="submit">Buat Akun & Belanja →</button>
+    </form>
+    <p class="security-note">Demo frontend: akun disimpan di browser ini. Jangan gunakan password penting.</p>
+  </section>
+</main>
+<script src="js/auth.js"></script>
+</body></html>

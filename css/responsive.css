@@ -1,0 +1,16 @@
+/* Vilda Makeup — responsive.css */
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .nav-links{order:3;width:100%;justify-content:center}
+  .search-box{order:2}
+}
+
+/* Admin dashboard additions */
+.admin-content{max-width:760px}
+.admin-content h3{color:var(--pink-dark);margin:12px 0}
+.admin-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f3e3ea}
+.admin-row button{border:0;border-radius:8px;padding:7px 10px;cursor:pointer;background:var(--rose);color:var(--pink-dark);font-weight:600}
+.admin-row small{color:#8d7180}
+[hidden]{display:none!important}
+@media(max-width:600px){.admin-row{align-items:flex-start;flex-direction:column}.admin-content{padding:18px}}

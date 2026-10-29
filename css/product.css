@@ -1,0 +1,80 @@
+/* Vilda Makeup — product.css */
+/* KATEGORI */
+.cat-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cat-card{background:#fff;padding:25px 30px;border-radius:18px;cursor:pointer;text-align:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.06);transition:.3s;min-width:130px}
+.cat-card:hover,.cat-card.active{background:var(--pink-dark);color:#fff;transform:translateY(-5px)}
+.cat-card .icon{font-size:1.9rem;display:block;margin-bottom:8px}
+.cat-card small{opacity:.7}
+
+
+/* PRODUK */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.06);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(201,79,130,.2)}
+.card .img{height:170px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.card-body{padding:16px}
+.card-body h3{font-size:1rem;margin-bottom:5px}
+.card-body .cat{font-size:.78rem;color:var(--pink-dark);background:var(--rose);padding:3px 10px;border-radius:10px;display:inline-block;margin-bottom:8px}
+.card-body .price{color:var(--gold);font-weight:800;font-size:1.05rem}
+.rating{color:#f5a623;font-size:.85rem}
+.add-btn{width:100%;margin-top:12px;background:var(--pink-dark);color:#fff;border:none;padding:10px;
+  border-radius:25px;font-weight:600;cursor:pointer;transition:.3s}
+.add-btn:hover{background:var(--pink)}
+.empty-msg{text-align:center;padding:40px;color:#a07b8b;grid-column:1/-1}
+
+
+/* CART DRAWER */
+.overlay{position:fixed;inset:0;background:#0007;z-index:200;display:none}
+.overlay.show{display:block}
+.cart-panel{position:fixed;top:0;right:-420px;width:380px;max-width:92vw;height:100vh;background:#fff;
+  z-index:300;transition:.4s;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+.cart-panel.show{right:0}
+.cart-head{padding:20px;background:var(--pink-dark);color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cart-head button{background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+.cart-items{flex:1;overflow-y:auto;padding:15px}
+.cart-item{display:flex;gap:12px;align-items:center;border-bottom:1px solid #f3e3ea;padding:12px 0}
+.cart-item .thumb{width:55px;height:55px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.cart-item h4{font-size:.9rem}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--pink);background:#fff;color:var(--pink-dark);cursor:pointer;font-weight:700}
+.qty span{min-width:20px;text-align:center;font-weight:600}
+.del{background:none;border:none;color:#d33;cursor:pointer;font-size:1rem}
+.cart-foot{padding:18px;border-top:2px solid var(--rose)}
+.cart-foot .total{display:flex;justify-content:space-between;font-size:1.15rem;font-weight:800;margin-bottom:12px}
+.cart-foot .total span:last-child{color:var(--pink-dark)}
+.buy-btn{width:100%;background:var(--gold);color:#fff;border:none;padding:13px;border-radius:25px;font-weight:700;font-size:1rem;cursor:pointer;transition:.3s}
+.buy-btn:hover{filter:brightness(1.1)}
+
+
+/* CHECKOUT MODAL */
+.modal{position:fixed;inset:0;background:#0008;z-index:400;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:20px;max-width:520px;width:100%;max-height:92vh;overflow-y:auto;padding:28px}
+.modal-content h2{color:var(--pink-dark);margin-bottom:18px;text-align:center}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;margin-bottom:5px;color:#7a5566}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid #f0d5e0;border-radius:10px;outline:none;font-size:.95rem}
+.form-group input:focus,.form-group select:focus{border-color:var(--pink)}
+.pay-opts{display:flex;gap:10px}
+.pay-opts label{flex:1;border:1.5px solid #f0d5e0;border-radius:10px;padding:10px;text-align:center;cursor:pointer;font-size:.85rem}
+.pay-opts input{display:none}
+.pay-opts input:checked+span{color:var(--pink-dark);font-weight:700}
+.pay-opts label:has(input:checked){border-color:var(--pink-dark);background:var(--rose)}
+.summary{background:var(--rose);border-radius:12px;padding:14px;margin:14px 0;font-size:.92rem}
+.summary div{display:flex;justify-content:space-between;padding:3px 0}
+
+
+/* TOAST */
+.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--dark);color:#fff;padding:13px 28px;border-radius:30px;z-index:999;
+  transition:.4s;opacity:0;font-weight:600}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+
+/* Foto produk yang diunggah admin */
+.card .img img { width:100%; height:100%; object-fit:contain; display:block; padding:8px; }
+.cart-item .thumb img { width:100%; height:100%; object-fit:cover; border-radius:12px; }
+.admin-image-preview { margin-top:10px; min-height:90px; padding:10px; border:1px dashed #e879a6; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#a07b8b; }
+.admin-image-preview img { max-width:100%; max-height:180px; object-fit:contain; border-radius:8px; }
+#adminProductList .admin-row button { cursor:pointer; }

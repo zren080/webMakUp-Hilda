@@ -1,0 +1,16 @@
+/* Vilda Makeup — style.css */
+/* ============ CSS (20% nilai) ============ */
+:root{
+  --pink:#e879a6; --pink-dark:#c94f82; --rose:#fdeef4;
+  --gold:#d4a373; --dark:#2d2226; --light:#fff9fb;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
+body{background:var(--light);color:var(--dark)}
+a{text-decoration:none;color:inherit}
+
+
+/* SECTIONS */
+section{padding:55px 5%}
+h2.title{text-align:center;color:var(--pink-dark);font-size:2rem;margin-bottom:8px}
+.subtitle{text-align:center;color:#a07b8b;margin-bottom:35px}
+
